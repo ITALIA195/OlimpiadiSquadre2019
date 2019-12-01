@@ -1,7 +1,24 @@
-# Olimpiadi a Squadre 2019-2020
+# Olympics in Team
 
-Le mie soluzioni agli esercizi delle olimpiadi a squadre di quest'anno.
+This repository contains my take on the exercises of the 11th edition of the [Olympics in Team](https://sites.google.com/aldini.istruzioneer.it/olimpiadi-informatica-squadre/homepage) project.
 
-Tenere a mente che queste non sono le soluzioni che ho consegnato durante la prova ma sono le implementazioni fatte dopo la prova con l'accesso a internet e le soluzioni proposte dagli amministratori.
+## Solutions
 
-Lo scopo di questa repository e' prendere dimestichezza con gli algoritmi piu' comuni e repetuti nelle varie olimpiadi.
+Keep in mind that this repository doesn't contain any of the solutions I submitted. I tried solving the exercises after the competions in order to prepare myself to the upcoming rounds, hence I had access to both the internet and the solutions (even though I avoided using either on the exercises I knew I could solve)
+
+## Contents
+
+The _Olympics in team_ are divided in 3 rounds on 3 different dates, those are the rounds and the exercises that are included in this repository.
+
+- [x] Round 1
+  - [x] 23
+  - [x] blindpunch
+  - [x] butoaie
+  - [x] fibonaccibug
+  - [ ] funnygraph
+  - [x] grades
+  - [x] smartphone
+  - [ ] sprei
+  - [x] teleport2
+- [ ] Round 2
+- [ ] Round 3
