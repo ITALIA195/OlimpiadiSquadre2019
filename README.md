@@ -22,3 +22,9 @@ The _Olympics in team_ are divided in 3 rounds on 3 different dates, those are t
   - [x] [teleport2](round1/project/src/teleport2)
 - [ ] Round 2
 - [ ] Round 3
+
+## License
+
+This repository is licensed under the [MIT license](https://choosealicense.com/licenses/mit/), use this project however you'd like.
+
+THE _statements.pdf_ FILES WERE ADDED FOR REFERENCE PURPOSES ONLY. THOSE ARE SUBJECTED TO THEIR OWN SEPARATE LICENSE. FOR MORE INFORMATION PLEASE CONTACT THEIR LICENSORS THROUGH THE OLIMPYCS OFFICIAL WEBSITE
