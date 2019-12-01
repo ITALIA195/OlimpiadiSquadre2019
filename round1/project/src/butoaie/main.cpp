@@ -1,20 +1,17 @@
 #include <iostream>
-#include <cassert>
-
 #include <algorithm>
 #include <vector>
 
 int main(int argc, char *argv[])
 {
     int N, K, P, Q;
-    assert(2 == scanf("%d %d", &N, &K));
-    assert(2 == scanf("%d %d", &P, &Q));
+    std::cin >> N >> K >> P >> Q;
 
     auto max = 0;
     std::vector<int> vec(N);
     for (size_t i = 0; i < N; i++)
     {
-        assert(1 == scanf("%d", &vec[i]));
+        std::cin >> vec[i];
         if (max < vec[i])
             max = vec[i];
     }
@@ -44,6 +41,6 @@ int main(int argc, char *argv[])
             b = median;
     }
 
-    printf("%d", a);
+    std::cout << a;
     return 0;
 }

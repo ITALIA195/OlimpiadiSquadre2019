@@ -1,7 +1,6 @@
 #include <iostream>
-#include <cassert>
-
 #include <vector>
+#include <iomanip>
 
 int binarySearch(std::vector<std::pair<float, float>> vec, float num)
 {
@@ -26,17 +25,17 @@ int binarySearch(std::vector<std::pair<float, float>> vec, float num)
 int main(int argc, char *argv[])
 {
     int T;
-    assert(1 == scanf("%d", &T));
+    std::cin >> T;
     for (size_t t = 0; t < T; t++)
     {
         int N, K;
-        assert(2 == scanf("%d %d", &N, &K));
+        std::cin >> N >> K;
 
         std::vector<std::pair<float, float>> inputs;
         for (size_t j = 0; j < N; j++)
         {
             float P;
-            assert(1 == scanf("%f", &P));
+            std::cin >> P;
             
             int index = binarySearch(inputs, P);
             inputs.insert(inputs.begin() + index, { P, 1 - P });
@@ -54,8 +53,9 @@ int main(int argc, char *argv[])
             int index = binarySearch(inputs, item.first);
             inputs.insert(inputs.begin() + index, item);
         }
-        probTot = floor(probTot * 1000000) / 1000000;
-        printf("%.6f", probTot);
+
+        probTot = std::floor(probTot * 1e6f) / 1e6f;
+        std::cout << std::fixed << std::setprecision(6) << probTot << std::endl;
     }
 
     return 0;

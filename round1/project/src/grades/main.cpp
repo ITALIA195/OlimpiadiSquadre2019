@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cassert>
 
 int main(int argc, char *argv[])
 {
@@ -7,11 +6,11 @@ int main(int argc, char *argv[])
     int lastSufficient = -1;
 
     int N;
-    assert(1 == scanf("%d", &N));
+    std::cin >> N;
     for (size_t i = 0; i < N; i++)
     {
         int G;
-        assert(1 == scanf("%d", &G));
+        std::cin >> G;
 
         if (firstInsufficient < 0 && G < 6)
             firstInsufficient = i;
@@ -22,6 +21,6 @@ int main(int argc, char *argv[])
     int result = -1;
     if (firstInsufficient != -1 && lastSufficient != -1 && firstInsufficient <= lastSufficient)
         result = lastSufficient - firstInsufficient + 1;
-    printf("%d", result);
+    std::cout << result;
     return 0;
 }

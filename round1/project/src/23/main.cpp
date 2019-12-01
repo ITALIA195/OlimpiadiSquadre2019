@@ -1,10 +1,9 @@
 #include <iostream>
-#include <cassert>
 #include <vector>
 
-#define MAXN 100000000
-#define MAX_BASE2 27 // 2 ** MAX_BASE2 > MAXN
-#define MAX_BASE3 17 // 3 ** MAX_BASE3 > MAXN
+constexpr auto MAXN = 100000000;
+constexpr auto MAX_BASE2 = 27; // 2 ** MAX_BASE2 > MAXN;
+constexpr auto MAX_BASE3 = 17; // 3 ** MAX_BASE3 > MAXN;
 
 std::vector<int> base2{ 0 };
 std::vector<int> base3{ 0 };
@@ -24,7 +23,7 @@ int countSpecialNumbers(int max)
     return count;
 }
 
-void init()
+int main(int argc, char *argv[])
 {
     base2.reserve(MAX_BASE2);
     for (size_t i = 1; i <= MAX_BASE2; i++)
@@ -33,19 +32,15 @@ void init()
     base3.reserve(MAX_BASE3);
     for (size_t i = 1; i < MAX_BASE3; i++)
         base3.push_back(base3[i / 3] + i % 3);
-}
 
-int main(int argc, char *argv[])
-{
-    init();
     int T;
-    assert(1 == scanf("%d", &T));
+    std::cin >> T;
     for (size_t i = 0; i < T; i++)
     {
         int N; 
-        assert(1 == scanf("%d", &N));
+        std::cin >> N;
 
-        printf("%d ", countSpecialNumbers(N));
+        std::cout << countSpecialNumbers(N) << ' ';
     }
 
     return 0;

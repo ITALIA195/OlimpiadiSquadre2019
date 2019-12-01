@@ -1,6 +1,4 @@
 #include <iostream>
-#include <cassert>
-
 #include <algorithm>
 #include <vector>
 
@@ -37,11 +35,11 @@ int unboundedKnapsack(size_t W, std::vector<KnapsackItem> items)
 int main(int argc, char *argv[])
 {
     int T;
-    assert(1 == scanf("%d", &T));
+    std::cin >> T;
     for (size_t t = 0; t < T; t++)
     {
         int N, K;
-        assert(2 == scanf("%d %d", &N, &K));
+        std::cin >> N >> K;
 
         for (size_t lastIndex = fibonacci.size() - 1; fibonacci.back() < K; lastIndex++)
             fibonacci.push_back(fibonacci[lastIndex - 1] + fibonacci[lastIndex]);
@@ -50,11 +48,11 @@ int main(int argc, char *argv[])
         for (size_t i = 0; i < N; i++)
         {
             int A, B;
-            assert(2 == scanf("%d %d", &A, &B));
+            std::cin >> A >> B;
             vec[i] = { fibonacci[A], B };
         }
 
-        printf("%d\n", unboundedKnapsack(K, vec));
+        std::cout << unboundedKnapsack(K, vec) << std::endl;
     }
     return 0;
 }

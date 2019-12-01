@@ -1,22 +1,21 @@
 #include <iostream>
-#include <cassert>
 
 int main(int argc, char *argv[])
 {
     int N, M;
-    assert(2 == scanf("%d %d", &N, &M));
+    std::cin >> N >> M;
     for (int K = 0; K < M; K++)
     {
         int a, b, z;
-        assert(3 == scanf("%d %d %d", &a, &b, &z));
+        std::cin >> a >> b >> z;
 
         if (a - b != z)
         {
-            printf("%d", K);
+            std::cout << K;
             return 0;
         }
     }
 
-    printf("%d", M);
+    std::cout << M;
     return 0;
 }

@@ -1,6 +1,6 @@
 #include <iostream>
-#include <cassert>
 #include <cmath>
+#include <iomanip>
 #include <algorithm>
 
 typedef struct {
@@ -18,15 +18,21 @@ float dist(Point A, Point B)
 int main(int argc, char *argv[])
 {
     int T;
-    assert(1 == scanf("%u", &T));
+    std::cin >> T;
     for (size_t i = 0; i < T; i++)
     {
-        float x1, y1, x2, y2, x3, y3, R;
-        assert(7 == scanf("%f %f %f %f %f %f %f", &x1, &y1, &x2, &y2, &x3, &y3, &R));
+        float x, y, R;
 
-        Point A{ x1, y1 };
-        Point B{ x2, y2 };
-        Point C{ x3, y3 };
+        std::cin >> x >> y;
+        Point A{ x, y };
+
+        std::cin >> x >> y;
+        Point B{ x, y };
+
+        std::cin >> x >> y;
+        Point C{ x, y };
+
+        std::cin >> R;
 
         float AB = dist(A, B);
         float AC = dist(A, C);
@@ -37,8 +43,9 @@ int main(int argc, char *argv[])
         if (BC > R) bed -= R;
 
         float result = std::min(AB, bed);
-        result = std::floor(result * 1000000) / 1000000;
-        printf("%.6f", result);
+
+        result = std::floor(result * 1e6f) / 1e6f;
+        std::cout << std::fixed << std::setprecision(6) << result << std::endl;
     }
     return 0;
 }

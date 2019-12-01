@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cassert>
 
 int main(int argc, char *argv[])
 {
@@ -7,11 +6,11 @@ int main(int argc, char *argv[])
     int totalCost{};
 
     int N;
-    assert(1 == scanf("%d", &N));
+    std::cin >> N;
     for (size_t i = 0; i < N; i++)
     {
         int P;
-        assert(1 == scanf("%d", &P));
+        std::cin >> P;
         
         if (currentCost < P)
         {
@@ -20,6 +19,6 @@ int main(int argc, char *argv[])
         }
     }
 
-    printf("%d", totalCost);
+    std::cout << totalCost;
     return 0;
 }
