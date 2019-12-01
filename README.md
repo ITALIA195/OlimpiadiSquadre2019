@@ -10,7 +10,7 @@ Keep in mind that this repository doesn't contain any of the solutions I submitt
 
 The _Olympics in team_ are divided in 3 rounds on 3 different dates, those are the rounds and the exercises that are included in this repository.
 
-- [x] Round 1
+- [x] [Round 1](round1/)
   - [x] [23](round1/project/src/23)
   - [x] [blindpunch](round1/project/src/blindpunch)
   - [x] [butoaie](round1/project/src/butoaie)
