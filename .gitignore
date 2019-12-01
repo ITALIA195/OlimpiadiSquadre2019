@@ -1,0 +1,6 @@
+build/
+solutions/
+testcases/
+*.pdf
+*.txt
+!CMakeLists.txt
