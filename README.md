@@ -11,14 +11,14 @@ Keep in mind that this repository doesn't contain any of the solutions I submitt
 The _Olympics in team_ are divided in 3 rounds on 3 different dates, those are the rounds and the exercises that are included in this repository.
 
 - [x] Round 1
-  - [x] 23
-  - [x] blindpunch
-  - [x] butoaie
-  - [x] fibonaccibug
-  - [ ] funnygraph
-  - [x] grades
-  - [x] smartphone
-  - [ ] sprei
-  - [x] teleport2
+  - [x] [23](round1/project/src/23)
+  - [x] [blindpunch](round1/project/src/blindpunch)
+  - [x] [butoaie](round1/project/src/butoaie)
+  - [x] [fibonaccibug](round1/project/src/fibonaccibug)
+  - [ ] [funnygraph](round1/project/src/funnygraph)
+  - [x] [grades](round1/project/src/grades)
+  - [x] [smartphone](round1/project/src/smartphone)
+  - [ ] [sprei](round1/project/src/sprei)
+  - [x] [teleport2](round1/project/src/teleport2)
 - [ ] Round 2
 - [ ] Round 3
