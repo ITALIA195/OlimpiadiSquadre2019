@@ -1,6 +1,6 @@
 #include <iostream>
-#include <assert.h>
-#include <math.h>
+#include <cassert>
+#include <cmath>
 #include <algorithm>
 
 typedef struct {
@@ -12,7 +12,7 @@ float dist(Point A, Point B)
 {
     const float diffX = A.x - B.x;
     const float diffY = A.y - B.y;
-    return sqrt(diffX * diffX + diffY * diffY);
+    return std::sqrt(diffX * diffX + diffY * diffY);
 }
 
 int main(int argc, char *argv[])
@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
         if (BC > R) bed -= R;
 
         float result = std::min(AB, bed);
-        result = floor(result * 1000000) / 1000000;
+        result = std::floor(result * 1000000) / 1000000;
         printf("%.6f", result);
     }
     return 0;
