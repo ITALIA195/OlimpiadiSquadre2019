@@ -2,8 +2,8 @@
 #include <vector>
 
 constexpr auto MAXN = 100000000;
-constexpr auto MAX_BASE2 = 27; // 2 ** MAX_BASE2 > MAXN;
-constexpr auto MAX_BASE3 = 17; // 3 ** MAX_BASE3 > MAXN;
+constexpr auto MAX_BASE2 = 16384;
+constexpr auto MAX_BASE3 = 19683;
 
 std::vector<int> base2{ 0 };
 std::vector<int> base3{ 0 };
