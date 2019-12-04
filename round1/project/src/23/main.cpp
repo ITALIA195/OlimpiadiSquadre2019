@@ -5,42 +5,34 @@ constexpr auto MAXN = 100000000;
 constexpr auto MAX_BASE2 = 16384;
 constexpr auto MAX_BASE3 = 19683;
 
-std::vector<int> base2{ 0 };
-std::vector<int> base3{ 0 };
-
-bool isSpecialNumber(int num)
-{
-    int bits2 = base2[num / MAX_BASE2] + base2[num % MAX_BASE2];
-    int bits3 = base3[num / MAX_BASE3] + base3[num % MAX_BASE3];
-    return bits2 == bits3;
-}
-
-int countSpecialNumbers(int max)
-{
-    int count{};
-    for (int i = 1; i <= max; i++)
-        count += isSpecialNumber(i);
-    return count;
-}
+std::vector<int> base2(MAX_BASE2 + 1);
+std::vector<int> base3(MAX_BASE3 + 1);  
 
 int main(int argc, char *argv[])
 {
-    base2.reserve(MAX_BASE2);
     for (size_t i = 1; i <= MAX_BASE2; i++)
-        base2.push_back(base2[i / 2] + i % 2);
+        base2[i] = base2[i / 2] + i % 2;
 
-    base3.reserve(MAX_BASE3);
-    for (size_t i = 1; i < MAX_BASE3; i++)
-        base3.push_back(base3[i / 3] + i % 3);
+    for (size_t i = 1; i <= MAX_BASE3; i++)
+        base3[i] = base3[i / 3] + i % 3;
 
-    int T;
+    uint32_t T;
     std::cin >> T;
-    for (size_t i = 0; i < T; i++)
+    for (size_t t = 0; t < T; t++)
     {
-        int N; 
+        uint32_t N;
         std::cin >> N;
 
-        std::cout << countSpecialNumbers(N) << ' ';
+        uint32_t count{};
+        for (int i = 1; i <= N; i++)
+        {
+            int bits2 = base2[i / MAX_BASE2] + base2[i % MAX_BASE2];
+            int bits3 = base3[i / MAX_BASE3] + base3[i % MAX_BASE3];
+            if (bits2 == bits3)
+                ++count;
+        }
+
+        std::cout << count << ' ';
     }
 
     return 0;
