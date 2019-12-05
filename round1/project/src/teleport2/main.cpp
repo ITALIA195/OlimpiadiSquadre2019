@@ -4,14 +4,14 @@
 #include <algorithm>
 
 typedef struct {
-    float x;
-    float y;
+    double x;
+    double y;
 } Point;
 
-float dist(Point A, Point B) 
+double dist(Point A, Point B) 
 {
-    const float diffX = A.x - B.x;
-    const float diffY = A.y - B.y;
+    const double diffX = A.x - B.x;
+    const double diffY = A.y - B.y;
     return std::sqrt(diffX * diffX + diffY * diffY);
 }
 
@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
     std::cin >> T;
     for (size_t i = 0; i < T; i++)
     {
-        float x, y, R;
+        double x, y, R;
 
         std::cin >> x >> y;
         Point A{ x, y };
@@ -34,17 +34,17 @@ int main(int argc, char *argv[])
 
         std::cin >> R;
 
-        float AB = dist(A, B);
-        float AC = dist(A, C);
-        float BC = dist(B, C);
+        double AB = dist(A, B);
+        double AC = dist(A, C) - R;
+        double BC = dist(B, C) - R;
 
-        float bed = AC + BC;
-        if (AC > R) bed -= R;
-        if (BC > R) bed -= R;
+        if (AC < 0) AC = 0;
+        if (BC < 0) BC = 0;
 
-        float result = std::min(AB, bed);
+        double bed = AC + BC;
+        double result = std::min(AB, bed);
 
-        result = std::floor(result * 1e6f) / 1e6f;
+        result = std::floor(result * 1e6) / 1e6;
         std::cout << std::fixed << std::setprecision(6) << result << std::endl;
     }
     return 0;
