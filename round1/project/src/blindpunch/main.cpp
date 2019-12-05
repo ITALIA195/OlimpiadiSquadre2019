@@ -1,8 +1,9 @@
 #include <iostream>
 #include <vector>
+#include <cmath>
 #include <iomanip>
 
-int binarySearch(std::vector<std::pair<float, float>> vec, float num)
+int binarySearch(std::vector<std::pair<double, double>> vec, double num)
 {
     int left = 0;
     int right = (int)vec.size() - 1;
@@ -31,18 +32,18 @@ int main(int argc, char *argv[])
         int N, K;
         std::cin >> N >> K;
 
-        std::vector<std::pair<float, float>> inputs;
-        for (size_t j = 0; j < N; j++)
+        std::vector<std::pair<double, double>> inputs;
+        for (size_t i = 0; i < N; i++)
         {
-            float P;
+            double P;
             std::cin >> P;
             
             int index = binarySearch(inputs, P);
             inputs.insert(inputs.begin() + index, { P, 1 - P });
         }
-
-        float probTot{};
-        for (size_t j = 0; j < K; j++)
+        
+        double probTot{};
+        for (size_t i = 0; i < K; i++)
         {
             auto item = inputs.back();
             inputs.pop_back();
@@ -54,7 +55,7 @@ int main(int argc, char *argv[])
             inputs.insert(inputs.begin() + index, item);
         }
 
-        probTot = std::floor(probTot * 1e6f) / 1e6f;
+        probTot = floor(probTot * 1e6) / 1e6;
         std::cout << std::fixed << std::setprecision(6) << probTot << std::endl;
     }
 
