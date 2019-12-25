@@ -1,58 +1,36 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
-
-std::vector<int> fibonacci{ 1, 1 };
-
-typedef struct {
-    int weight;
-    int value;
-} KnapsackItem;
-
-int unboundedKnapsack(size_t W, std::vector<KnapsackItem> items)
-{
-    int* dp = new int[W + 1]{ 0 };
-
-    for (size_t i = 0; i <= W; i++)
-    {
-        for (size_t j = 0; j < items.size(); j++)
-        {
-            auto item = items[j];
-            if (item.weight <= i)
-                dp[i] = std::max(dp[i], dp[i - item.weight] + item.value);
-        }
-    }
-
-#if LIMITED_MEMORY
-    int ret = dp[W];
-    delete[] dp;
-    return ret;
-#else
-    return dp[W];
-#endif
-}
+#include <cassert>
 
 int main(int argc, char *argv[])
 {
     int T;
+    std::vector<int> fibonacci{ 1, 1 };
+
     std::cin >> T;
-    for (size_t t = 0; t < T; t++)
+    while (T--)
     {
-        int N, K;
+        size_t N, K;
         std::cin >> N >> K;
 
-        for (size_t lastIndex = fibonacci.size() - 1; fibonacci.back() < K; lastIndex++)
-            fibonacci.push_back(fibonacci[lastIndex - 1] + fibonacci[lastIndex]);
+        int next;
+        for (auto it = fibonacci.end(); (next = it[-1] + it[-2]) < K; it = fibonacci.end())
+            fibonacci.push_back(next);
 
-        std::vector<KnapsackItem> vec(N);
+        std::vector<int> values(fibonacci.size());
         for (size_t i = 0; i < N; i++)
         {
             int A, B;
             std::cin >> A >> B;
-            vec[i] = { fibonacci[A], B };
+            values[A] = std::max(values[A], B);
         }
 
-        std::cout << unboundedKnapsack(K, vec) << std::endl;
+        std::vector<int> dp;
+
+        // IMPLEMENT DP
+
+        std::cout << dp.back() << std::endl;
     }
     return 0;
 }

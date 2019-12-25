@@ -2,8 +2,8 @@
 
 int main(int argc, char *argv[])
 {
-    int firstInsufficient = -1;
-    int lastSufficient = -1;
+    int firstInsufficient{ -1 };
+    int lastSufficient{ -1 };
 
     int N;
     std::cin >> N;
@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
             lastSufficient = i;
     }
 
-    int result = -1;
+    int result{ -1 };
     if (firstInsufficient != -1 && lastSufficient != -1 && firstInsufficient <= lastSufficient)
         result = lastSufficient - firstInsufficient + 1;
     std::cout << result;
