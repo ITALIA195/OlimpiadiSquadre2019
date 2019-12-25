@@ -3,10 +3,10 @@
 #include <iomanip>
 #include <algorithm>
 
-typedef struct {
+struct Point {
     double x;
     double y;
-} Point;
+};
 
 double dist(Point A, Point B) 
 {
