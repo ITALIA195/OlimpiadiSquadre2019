@@ -14,7 +14,7 @@ The _Olympics in team_ are divided in 3 rounds on 3 different dates, those are t
   - [x] [23](round1/project/src/23)
   - [x] [blindpunch](round1/project/src/blindpunch)
   - [x] [butoaie](round1/project/src/butoaie)
-  - [x] [fibonaccibug](round1/project/src/fibonaccibug)
+  - [ ] [fibonaccibug](round1/project/src/fibonaccibug)
   - [ ] [funnygraph](round1/project/src/funnygraph)
   - [x] [grades](round1/project/src/grades)
   - [x] [smartphone](round1/project/src/smartphone)
@@ -26,5 +26,3 @@ The _Olympics in team_ are divided in 3 rounds on 3 different dates, those are t
 ## License
 
 This repository is licensed under the [MIT license](https://choosealicense.com/licenses/mit/), use this project however you'd like.
-
-THE _statements.pdf_ FILES WERE ADDED FOR REFERENCE PURPOSES ONLY. THOSE ARE SUBJECTED TO THEIR OWN SEPARATE LICENSE. FOR MORE INFORMATION PLEASE CONTACT THEIR LICENSORS THROUGH THE OLIMPYCS OFFICIAL WEBSITE
