@@ -3,7 +3,7 @@
 int main(int argc, char *argv[])
 {
     int currentCost{};
-    int totalCost{};
+    uint64_t totalCost{};
 
     int N;
     std::cin >> N;
