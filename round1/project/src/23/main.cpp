@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
 
     uint32_t T;
     std::cin >> T;
-    for (size_t t = 0; t < T; t++)
+    while (T--)
     {
         uint32_t N;
         std::cin >> N;

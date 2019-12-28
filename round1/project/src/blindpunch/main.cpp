@@ -7,13 +7,13 @@ int main(int argc, char *argv[])
 {
     int T;
     std::cin >> T;
-    for (size_t t = 0; t < T; t++)
+    while (T--)
     {
         int N, K;
         std::cin >> N >> K;
 
         std::multiset<std::pair<double, double>, std::greater<std::pair<double, double>>> values;
-        for (size_t i = 0; i < N; i++)
+        while (N--)
         {
             double P;
             std::cin >> P;
@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
         }
         
         double probTot{};
-        for (size_t i = 0; i < K; i++)
+        while (K--)
         {
             auto it = values.begin();
             auto item = *it;

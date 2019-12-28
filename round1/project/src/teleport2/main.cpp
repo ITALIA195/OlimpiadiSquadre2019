@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 {
     int T;
     std::cin >> T;
-    for (size_t i = 0; i < T; i++)
+    while (T--)
     {
         double x, y, R;
 
